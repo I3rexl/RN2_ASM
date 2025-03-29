@@ -1,0 +1,77 @@
+{
+  "user": [
+    {
+      "name": "Xicular Mate",
+      "email": "matelar@gmail.com",
+      "phone": "0986513463",
+      "password": "1234aaa123"
+    },
+    {
+      "name": "Bủng",
+      "email": "bung@gmail.com",
+      "phone": "0986998432",
+      "password": "123aaa123"
+    },
+    {
+      "name": "Ashler",
+      "email": "ash@gmail.com",
+      "phone": "0987778902",
+      "password": "123aaa123"
+    },
+    {
+      "id": "d8f8",
+      "name": "Mei Mei",
+      "email": "mei@gmail.com",
+      "phone": "0987654321",
+      "password": "123aaa123"
+    },
+    {
+      "id": "1dec",
+      "name": "Nguyen Hoang Anh",
+      "email": "anhnh@gmail.com",
+      "phone": "0987654321",
+      "password": "123aaa123"
+    },
+    {
+      "id": "9927",
+      "name": "Dang Khanh Linh",
+      "email": "dkl@gmail.com",
+      "phone": "0987654321",
+      "password": "123123"
+    },
+    {
+      "id": "ae0e",
+      "name": "Snoop Dog",
+      "email": "sdog@gmail.com",
+      "phone": "0987654321",
+      "password": "123123"
+    }
+  ],
+  "plant": [
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/8dc1/c3fd/4c79faa42e885c9a92c6e6b29666fdf3?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WZ~AHAuUWatIlQ8mp07V58Mex1ek6L6xilNxkSAMnBikjhLhskyBdsQAqSyE2UrIG4qkJvWuUt5OddJZNYmPU9kYxNzEpWPqoQ0B9CtFgEl7ypXNV4WaZzWG9aw2424vdNu4tmu8Xk9M2kr8YCb7Lc8FCrdg9luvNYMed4BG7IEfsgMhW7qIM75ff1FlSSd24d1DBV2WSAMTldGB1Hg0JlRXkIJGWcUyPePVyHTL8JHc2SnrrdNhsIy1wngJxyIHYBRQ95ZA2BYmZA9Whw29x1dZSqJlfmck1D~Af2Amwmp3HM3pS8GlgO0yLTOOfaDf9IKzkcjqdjhqEdGbmdzLbw__",
+      "name_plant": "Spider Plant",
+      "detail": "Ưa bóng",
+      "price": "350.000đ"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/28d9/bffb/22f7b1d90b3a956129c0034bc73180a5?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rT8v3edbgHgJ~QnC1bx8-BnBvBU~Jczln9ZB55NcaKzp1r2UhFevF9Xi8zYCTimsP20NUvkZsgv1um3YCgeKvn5p2kI0scSqnjxU5sAXZYOi3-rbfgKl0FEomC-4t~s~uonFEwxrrc6P-7HIMvvttU7J3TJtBZr~ahs~y0TPG~YV8fimQ5XC7ASTIQUffZFUv-sQgLh9921Yhe~266fkIhr51dHWsY25C3k1ZBSj2TlJcSNv4d3EFGbp4mYTv5eMBzx-F2WhwcqG8f6E-OqgztaF-g13e6YALk9TOjWKYYTAcAica9gYu13o~SUhXbLyQHG-FUjqnxIEtplYMWxzkw__",
+      "name_plant": "Song of India",
+      "detail": "Ưa sáng",
+      "price": "390.000đ"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/79db/7216/eefbefecedce13e3099111346323ae5a?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=s0YCVN50zDZ5UAGz~LsBrQOdNm3QUtjlIrhGCqok5PNAbnWNGNyknWJSLWgDYakYm2CTkDFEJBVMjGSht9FyLnTuURN6lzQvi86zK-4h6vHwogveg3DLHTc1kcymKx3NjY3N5dXdoDFJMRN6XsT2Yr2XGD2mZEQ6RMNGBCzJR7HYxq-~XM1Ypd4S88Zxe4~6JnX114jfW6zDVn~qmPU5etqXe7cpHsze5fxxeSiaxbWXIng1sxVfhcibT2GVVfpUgA0lwYi~Vz5n24st4BK753LQ42yGDA0tKw3S9qK6wxqIkphMyRCd9B0Olwannn~dW1LXmNpvCqePshbCWoXlYg__",
+      "name_plant": "Grey Star Calarthea",
+      "detail": "Ưa sáng",
+      "price": "295.000đ"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/9535/a104/47ad12d663100e872d9e3244b91407a8?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tGl7U293iWtSjJoK0jrpJy~kPt8o2P2So0T1BaAyD34cGYtTeNwkwT~as~BMg852DVDMqcKE7cp7rv82MkZzSBi7LeXdfxRdIYSxbN1gq5y-vAKnMO6npTsjP8VmEip01fJSkzhoQhu9cpUlIvXv~5Lm3g3FekiHUp2ttzUIkVmVq7uUgZXNda2w~XpvSLPIATWipk0ylOwlTJAQgKk~9ek64Po~UmTH4Wez0Iegk1frtsoP5cf7Mzpd3xpZ~vbacZoUejIaxezgmzvVCXYCL3de79dyjJLrUzFlfjebe4U~iAAvmggToAGaj6ddf69DFzGWLD-COOupV3qUnJ7CWg__",
+      "name_plant": "Banana Plant",
+      "detail": "Ưa sáng",
+      "price": "328.000đ"
+    }
+    
+  ]
+}
