@@ -1,4 +1,5 @@
-import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, SafeAreaView, Alert, FlatList } from "react-native";
+import useFetch from "../hooks/useFetch";
+import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, SafeAreaView, Alert, FlatList, ScrollView } from "react-native";
 import { useState, useEffect } from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Search from "./Search";
@@ -7,6 +8,139 @@ import Profile from "./Profile";
 import axios from "axios";
 
 const BottomTab= createBottomTabNavigator();
+
+const Main = ({ navigation }: any) => {
+    const { data: plantList, loading: loadingPlant } = useFetch("http://192.168.0.17:3000/plant");
+    const { data: potList, loading: loadingPot } = useFetch("http://192.168.0.17:3000/pot");
+    const {data: itemList, loading: loadingItem }= useFetch("http://192.168.0.17:3000/item");
+
+    const renderItemPlant= ({ item }) => {
+        return(
+            <TouchableOpacity
+                style={styles.card}
+                onPress={() =>
+                    navigation.navigate("ProductDetail", {
+                    avatar: item.avatar,
+                    name: item.name_plant,
+                    price: Number(item.price),
+                    origin: item.origin || "Châu Phi",
+                    quantity: item.quantity || 156
+                    })
+                }
+                >
+                <Image source={{ uri: item.avatar }} style={styles.avatarItem} />
+                <View style={styles.containerItem}>
+                    <Text style={styles.name}>{item.name_plant}</Text>
+                    <Text style={styles.detail}>{item.detail}</Text>
+                    <Text style={styles.price}>
+                        {`${Number(item.price).toLocaleString()}đ`}
+                    </Text>
+                </View>
+            </TouchableOpacity>
+            
+        )
+    }
+
+    const renderItemPot= ({ item }) => {
+        return(
+            <View style={styles.card}>
+                <Image source={{uri: item.avatar}} style={styles.avatarItem}/>
+                <View style={styles.containerItem}>
+                    <Text style={styles.name}>{item.name_pot}</Text>
+                    <Text style={styles.price}>
+                        {`${Number(item.price).toLocaleString()}đ`}
+                    </Text>
+                </View>
+            </View>
+            
+        )
+    }
+
+    const renderItemItem= ({ item }) => {
+        return(
+            <View style={styles.card}>
+                <Image source={{uri: item.avatar}} style={styles.avatarItem}/>
+                <View style={styles.containerItem}>
+                    <Text style={styles.name}>{item.name_item}</Text>
+                    <Text style={styles.price}>
+                        {`${Number(item.price).toLocaleString()}đ`}
+                    </Text>
+                </View>
+            </View>
+            
+        )
+    }
+
+    return(
+        <SafeAreaView style={{flex: 1, backgroundColor: "#F6F6F6"}}>
+            <View style={styles.container}>
+                <Image source={require("../images/background_Main.png")} style={styles.backgroundMain}/>
+
+                <Text style={styles.textName}>Planta - tỏa sáng {"\n"}không gian nhà bạn</Text>
+
+                <TouchableOpacity style={styles.shoppingIC} onPress={() => navigation.navigate("Cart")}>
+                    <Image source={require("../images/shopping-cart.png")} />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Text style={styles.textNew}>Xem hàng mới về</Text>
+                    <Image source={require("../images/arrow-right.png")} style={styles.arrow}/>
+                </TouchableOpacity>
+
+                <ScrollView style={styles.containerList}>
+                    <Text style={styles.textCategory}>Cây trồng</Text>
+                    
+                    <FlatList
+                        data={plantList}
+                        renderItem={renderItemPlant}
+                        numColumns={2}
+                        columnWrapperStyle={styles.row}
+                        keyExtractor={(item, index) => item.id ? item.id.toString() : index.toString()}
+                        style={styles.list}
+                        />                    
+                    
+                    <TouchableOpacity style={styles.morePlnt}>
+                        <Text style={styles.textmorePlnt}>Xem thêm cây trồng</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.textCategory}>Chậu cây trồng</Text>
+
+                    <FlatList
+                        data={potList}
+                        renderItem={renderItemPot}
+                        numColumns={2}
+                        columnWrapperStyle={styles.row}
+                        keyExtractor={(item, index) => item.id ? item.id.toString() : index.toString()}
+                        style={styles.list}
+                        />
+
+                    <TouchableOpacity style={styles.morePlnt}>
+                        <Text style={styles.textmorePlnt}>Xem thêm chậu cây</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.textCategory}>Phụ kiện</Text>
+
+                    <FlatList
+                        data={itemList}
+                        renderItem={renderItemItem}
+                        numColumns={2}
+                        columnWrapperStyle={styles.row}
+                        keyExtractor={(item, index) => item.id ? item.id.toString() : index.toString()}
+                        style={styles.list}
+                        />
+
+                    <TouchableOpacity style={styles.morePlnt}>
+                        <Text style={styles.textmorePlnt}>Xem thêm phụ kiện</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.textCategory}>Combo chăm sóc {"("}mới{")"}</Text>   
+                    
+                    <Image source={require('../images/comboNew.png')} style={styles.imgCombo}/>
+                </ScrollView>
+            </View>
+        </SafeAreaView>
+    )
+}
 
 const Home= () => {
     return(
@@ -54,73 +188,12 @@ const Home= () => {
     )
 }
 
-const Main= () => {
-    const [list, setList]= useState([]);
-    const apiUrl= "http://10.24.24.230:3000/plant";
-
-    useEffect(() => {
-        getList();
-    }, []);
-
-   
-
-    const getList= async () =>{
-        try {
-            const res= await axios.get(apiUrl);
-            console.log(res.data);
-            setList(res.data);
-            
-
-        } catch (error) {
-            console.log("Loi tai du lieu", error);
-            
-        }
-    }
-
-    const renderItem= ({ item }) => {
-        return(
-            <View style={styles.card}>
-                <Image source={{uri: item.avatar}} style={styles.avatarItem}/>
-                <View style={styles.containerItem}>
-                <Text style={styles.name}>{item.name_plant}</Text>
-                <Text style={styles.detail}>{item.detail}</Text>
-                <Text style={styles.price}>{item.price}</Text>
-                </View>
-            </View>
-        )
-    }
-
-    return(
-        <SafeAreaView style={{flex: 1}}>
-            <View style={styles.container}>
-                <Image source={require("../images/background_Main.png")} style={styles.backgroundMain}/>
-
-                <Text style={styles.textName}>Planta - tỏa sáng {"\n"}không gian nhà bạn</Text>
-
-                <TouchableOpacity style={styles.shoppingIC}>
-                    <Image source={require("../images/shopping-cart.png")} />
-                </TouchableOpacity>
-
-                <TouchableOpacity>
-                    <Text style={styles.textNew}>Xem hàng mới về</Text>
-                    <Image source={require("../images/arrow-right.png")} style={styles.arrow}/>
-                </TouchableOpacity>
-
-                <View style={styles.containerList}>
-                    <Text style={styles.textCategory}>Cây trồng</Text>
-                    
-                    <FlatList data={list} renderItem={renderItem} numColumns={2} columnWrapperStyle={styles.row}  keyExtractor={(item, index) => item.id ? item.id.toString() : index.toString()} style={styles.list}/>
-                </View>
-            </View>
-        </SafeAreaView>
-    )
-}
-
 const styles= StyleSheet.create({
     container:{
         flex: 1,
         alignItems: "center",
         backgroundColor: "#F6F6F6",
+        top: 30,
     },
     backgroundMain:{
         width: 450,
@@ -181,8 +254,10 @@ const styles= StyleSheet.create({
         fontSize: 24,
         margin: 20,
       },
-        containerItem:{
-        flex: 1,
+      containerItem:{
+        alignSelf: "flex-start",
+        marginTop: 8,
+        marginLeft: 10,
       },
       avatarItem:{
         width: "100%",
@@ -212,7 +287,8 @@ const styles= StyleSheet.create({
     },
     name: {
         fontSize: 16,
-        marginTop: 8,
+        fontWeight: "500",
+        color: "#000000",
     },
     detail: {
         top: 3,
@@ -221,10 +297,28 @@ const styles= StyleSheet.create({
     },
     price: {
         fontSize: 16,
-        fontWeight: "400",
+        fontWeight: "500",
         color: "#007537",
         marginTop: 4,
     },
+    morePlnt:{
+        marginTop: 40,
+        marginLeft: 40,
+        marginRight: 40,
+        alignItems: "flex-end",
+    },
+    textmorePlnt:{
+        textDecorationLine: "underline",
+        fontWeight: 500,
+        fontSize: 16,
+    },
+    imgCombo:{
+        width: 400,
+        height: 160,
+        margin: 20,
+        bottom: 20,
+        borderRadius: 8
+    }
 })
 
 export default Home;

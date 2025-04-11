@@ -35,7 +35,7 @@ export default function Register({navigation}: any) {
       }
 
       //gui yeu cau POST luu tai khoan moi
-      const response= await fetch("http://192.168.0.17:3000/user", {
+      const response= await fetch("http://10.24.24.230:3000/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

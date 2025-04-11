@@ -3,9 +3,6 @@ import useFonts from "../useFont";
 import { useState, useEffect } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
-
-
 export default function Login({ navigation }: any) {
 
   const [email, setEmail]= useState("");
@@ -41,16 +38,16 @@ export default function Login({ navigation }: any) {
 
   const validateLogin= async () =>{
     try {
-      //gửi yêu cầu GET để lấy DS
-      const response= await fetch("http://10.24.24.230:3000/user");
+      const response= await fetch("http://192.168.0.17:3000/user");
       const users= await response.json();
 
-      //kiểm tra xem email và pass có trong DS không
       const user= users.find(user => user.email === email && user.password === password);
 
       if(user){
-        setErrorMessage(""); //xóa lỗi nếu đúng
+        setErrorMessage(""); 
         setSuccessMessage("Đăng nhập thành công !");
+        
+        await AsyncStorage.setItem('loggedInUserEmail', email); // lưu email đăng nhập
 
         setTimeout(() => {
           setSuccessMessage("");
@@ -81,8 +78,6 @@ export default function Login({ navigation }: any) {
 
   }
 
-
-
   const fontsLoaded = useFonts();
 
   if (!fontsLoaded) {
@@ -102,7 +97,6 @@ export default function Login({ navigation }: any) {
 
         <Text style={styles.loginText}>Đăng nhập tài khoản</Text>
 
-        {/* Email */}
         <TextInput
           placeholder="Nhập email hoặc số điện thoại"
           style={[styles.textInputlogin, { top: 20 }, {borderColor: isFocusedTK ? "#009245" : "#8B8B8B"}]}
@@ -112,7 +106,6 @@ export default function Login({ navigation }: any) {
           onChangeText={setEmail}
         />
 
-        {/* Pass */}
         <TextInput
           placeholder="Mật khẩu"
           style={[styles.textInputlogin, { top: 30 }, {borderColor: isFocusedMK ? "#009245" : "#8B8B8B"}]}
@@ -123,30 +116,23 @@ export default function Login({ navigation }: any) {
           onChangeText={setPassword}
         />
 
-        {/* an hien mk */}
         <TouchableOpacity onPress={() => setSecureText(!secureText)}>
         <Image 
             source={secureText ? require("../images/uncheckMK.png") : require("../images/checkMK.png")}
             style={styles.btnMK}
-
           />
         </TouchableOpacity>
 
-        {/* hien thi khi sai mk tk */}
         {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
 
-        {/* ghi nho tk */}
         <TouchableOpacity onPress={() => setRememberTK(!rememberTK)}>
           <Image
             source={rememberTK ? require("../images/checkRemember.png") : require("../images/uncheckRemember.png")} 
             style={styles.btnRemember}
-
           />
 
           <Text style={styles.textRMB}>Nhớ tài khoản</Text>
         </TouchableOpacity>
-
-        
 
         <TouchableOpacity>
           <Text style={styles.textForgotPS}>Forgot Password ?</Text>
@@ -163,7 +149,6 @@ export default function Login({ navigation }: any) {
           <View style={styles.line} />
         </View>
 
-        {/* DN Other */}
         <View style={styles.containerOther}>
         <TouchableOpacity >
           <Image source={require("../images/Ic_Google.png")} />
@@ -183,7 +168,6 @@ export default function Login({ navigation }: any) {
         </View>
 
         {successMessage ? (<View style={styles.successMessage}><Text style={styles.successText}>{successMessage}</Text></View>) : null}
-
 
       </View>
     </SafeAreaView>
@@ -303,5 +287,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  
 });

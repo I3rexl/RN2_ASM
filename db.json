@@ -1,18 +1,21 @@
 {
   "user": [
     {
+      "id": "12",
       "name": "Xicular Mate",
       "email": "matelar@gmail.com",
       "phone": "0986513463",
       "password": "1234aaa123"
     },
     {
+      "id": "34",
       "name": "Bủng",
       "email": "bung@gmail.com",
       "phone": "0986998432",
       "password": "123aaa123"
     },
     {
+      "id": "56",
       "name": "Ashler",
       "email": "ash@gmail.com",
       "phone": "0987778902",
@@ -45,6 +48,20 @@
       "email": "sdog@gmail.com",
       "phone": "0987654321",
       "password": "123123"
+    },
+    {
+      "id": "dec5",
+      "name": "Dao Phuong Nam",
+      "email": "namdao@gmail.com",
+      "phone": "0987654321",
+      "password": "123123"
+    },
+    {
+      "id": "de57",
+      "name": "Nguyen Hoang Anh",
+      "email": "hoanganh@gmail.com",
+      "phone": "0987654321",
+      "password": "123123"
     }
   ],
   "plant": [
@@ -52,26 +69,81 @@
       "avatar": "https://s3-alpha-sig.figma.com/img/8dc1/c3fd/4c79faa42e885c9a92c6e6b29666fdf3?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WZ~AHAuUWatIlQ8mp07V58Mex1ek6L6xilNxkSAMnBikjhLhskyBdsQAqSyE2UrIG4qkJvWuUt5OddJZNYmPU9kYxNzEpWPqoQ0B9CtFgEl7ypXNV4WaZzWG9aw2424vdNu4tmu8Xk9M2kr8YCb7Lc8FCrdg9luvNYMed4BG7IEfsgMhW7qIM75ff1FlSSd24d1DBV2WSAMTldGB1Hg0JlRXkIJGWcUyPePVyHTL8JHc2SnrrdNhsIy1wngJxyIHYBRQ95ZA2BYmZA9Whw29x1dZSqJlfmck1D~Af2Amwmp3HM3pS8GlgO0yLTOOfaDf9IKzkcjqdjhqEdGbmdzLbw__",
       "name_plant": "Spider Plant",
       "detail": "Ưa bóng",
-      "price": "350.000đ"
+      "price": "350000",
+      "origin": "Châu Phi",
+      "quantity": "102",
+      "id": "1"
     },
     {
       "avatar": "https://s3-alpha-sig.figma.com/img/28d9/bffb/22f7b1d90b3a956129c0034bc73180a5?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rT8v3edbgHgJ~QnC1bx8-BnBvBU~Jczln9ZB55NcaKzp1r2UhFevF9Xi8zYCTimsP20NUvkZsgv1um3YCgeKvn5p2kI0scSqnjxU5sAXZYOi3-rbfgKl0FEomC-4t~s~uonFEwxrrc6P-7HIMvvttU7J3TJtBZr~ahs~y0TPG~YV8fimQ5XC7ASTIQUffZFUv-sQgLh9921Yhe~266fkIhr51dHWsY25C3k1ZBSj2TlJcSNv4d3EFGbp4mYTv5eMBzx-F2WhwcqG8f6E-OqgztaF-g13e6YALk9TOjWKYYTAcAica9gYu13o~SUhXbLyQHG-FUjqnxIEtplYMWxzkw__",
       "name_plant": "Song of India",
       "detail": "Ưa sáng",
-      "price": "390.000đ"
+      "price": "390000",
+      "origin": "Châu Phi",
+      "quantity": "122",
+      "id": "2"
     },
     {
       "avatar": "https://s3-alpha-sig.figma.com/img/79db/7216/eefbefecedce13e3099111346323ae5a?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=s0YCVN50zDZ5UAGz~LsBrQOdNm3QUtjlIrhGCqok5PNAbnWNGNyknWJSLWgDYakYm2CTkDFEJBVMjGSht9FyLnTuURN6lzQvi86zK-4h6vHwogveg3DLHTc1kcymKx3NjY3N5dXdoDFJMRN6XsT2Yr2XGD2mZEQ6RMNGBCzJR7HYxq-~XM1Ypd4S88Zxe4~6JnX114jfW6zDVn~qmPU5etqXe7cpHsze5fxxeSiaxbWXIng1sxVfhcibT2GVVfpUgA0lwYi~Vz5n24st4BK753LQ42yGDA0tKw3S9qK6wxqIkphMyRCd9B0Olwannn~dW1LXmNpvCqePshbCWoXlYg__",
       "name_plant": "Grey Star Calarthea",
       "detail": "Ưa sáng",
-      "price": "295.000đ"
+      "price": "295000",
+      "origin": "Châu Phi",
+      "quantity": "100",
+      "id": "3"
     },
     {
       "avatar": "https://s3-alpha-sig.figma.com/img/9535/a104/47ad12d663100e872d9e3244b91407a8?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tGl7U293iWtSjJoK0jrpJy~kPt8o2P2So0T1BaAyD34cGYtTeNwkwT~as~BMg852DVDMqcKE7cp7rv82MkZzSBi7LeXdfxRdIYSxbN1gq5y-vAKnMO6npTsjP8VmEip01fJSkzhoQhu9cpUlIvXv~5Lm3g3FekiHUp2ttzUIkVmVq7uUgZXNda2w~XpvSLPIATWipk0ylOwlTJAQgKk~9ek64Po~UmTH4Wez0Iegk1frtsoP5cf7Mzpd3xpZ~vbacZoUejIaxezgmzvVCXYCL3de79dyjJLrUzFlfjebe4U~iAAvmggToAGaj6ddf69DFzGWLD-COOupV3qUnJ7CWg__",
       "name_plant": "Banana Plant",
       "detail": "Ưa sáng",
-      "price": "328.000đ"
+      "price": "328000",
+      "origin": "Châu Phi",
+      "quantity": "80",
+      "id": "4"
     }
-    
+  ],
+  "pot": [
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/2513/c966/834221fbc31c808dfbb9ba52ad5ef5e4?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=btJpcep0qoGQiglX1ZNqE0ZiE7-x4yhqXsJcOPPIeI~Lppgg0mF2KiFnNtOlAf-UT-AgViYionXj89QFhUbs7MZb9PFqGslJPrNvCmipW0saYdjVOwOKb1VqMYl3y~pePKjxxizZORGfSsrNhxKGQ~dm0rEQme8GcIVBGqNzQPEXCklyyP9VbqjmUTr8QRUOdQaEqTDf1sL2D2TlUxKeXBDhwyNEA2kzJyroYfjCyHssZY7JX3hHFlUsWAh6epNbuihkKdbsWIIdDCyE03yFTjx72ygt-lKoY2Ds8GeLdu4vRkCvPXZlsxExdryuR-kxiUAAOzPv7YkWAcz5hs6Kbg__",
+      "name_pot": "Planta Trắng",
+      "price": "175000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/740c/be92/30d0e9ed9212eaa46291bb0045a45840?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PAveNZEg9Q0pHq3ygQ78VruX9B1gckFwFu~JIdF30wfBF7SwWQIeJazII9rqpvqx1e29byRceslEQyEQyUXaoys-wL067V0vJE9HTRNu0WNJSC7IINkfUpf0wYKEG13cwXCPtQELlg5RnAz-j1QzcDqrcvFsBMjmMhUEYo5CaMnj7-PN7Ty2q~hSkZ4fU2LwywpaKYunz23F2XJUqsFWIeE7~y3FWwpmLzVi1Kpt-xh3clo~4vY9Cp9qZYOLWdE-~gcEiOD8XjRI13-EEVbGcz0TJ-xPA4FhQ2icFlAHeuO1cQISkpLhHv2ivamc2dkyZ3HH7EX9NQ2Cp0qhGh1eOg__",
+      "name_pot": "Planta Lemon Balm",
+      "price": "255000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/ff1e/1ba8/1d4b4a5e1f83ad7d7c6a746d9c7677b8?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=UvaHVrJAMhumQ5DCq8oMNI8e7thEUAW7R5BLwZLpROmyTfLlOYgUz-hW~byGTta4epzojt0rvUC8yamlhSNYKVfwaf5XLPnVxzv9zLYV4R2glzxTH3KDhAfri9goEMueIj1QSVzg20MMQkFMzqMNTAVvpNATgaN0HwSlYO68RaN8b1VWwnkYKJrudWFdqRpByUiw~~q7Jzf4-fMJ6LsxBEAkxB1flzvKHpEEU5uhQGB50bGAruKvAr0oi7a5UdiCo9fLW5j0N1H8fUvaKXeS4NKx0vYmNWZwp8VGH4Iao~PYQIroMVyziMyeuvyeRRybyCJbwIMJXFKLL69xhgXBHw__",
+      "name_pot": "Planta Rosewood",
+      "price": "230000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/bfe9/b5e0/6bcc9eb160347c1e1dc9c9c768361182?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=HsTO2Obel~fn5r9finZfk9QmUub2AV0Nax0i9CLRRW3clFs7I4Yn2QtCKEmuLJifSieJNsvptPMpkcZhA6nx04rx4WaszIfxXLyPOH-WaLjokDvsz8HA7PjMWdrRl1du3K0dY3Ky64BbSvwhpOljyqoLUuEwk9gy3ZiqOE110ZSDbg1m9dOSjVa3NeiKLYswNma~n-jmic4VYaXjGWWllp7GKWXJrQxYAgkQs8Dcd2JizBw1JaSxBC8Dl7XDK8VYmib2sdNknBFeQiS5SN5Zl64iQOndSzPPTvraH5mfZ0vkJY8D~MKzn9L8xBAQ0tyewCcImy6m-z4nJsjbchhwjA__",
+      "name_pot": "Planta Dove Grey",
+      "price": "250000"
+    }
+  ],
+  "item": [
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/01aa/10b6/c9486cd92eb39c4bbe01298e1654452f?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=GcI0gX4JIMRg-PSAv7hPNn79LsiKbcjMIm6q1UaLbhIFxjnDIlLv5olr7ffL5YqepcV9beq0upFCQvTcyJWTfhyufD62kwmM~yuPsHwrWErsJobZ7txK2c~VbIWtOyNr8iHFUJEhjj4baYHh2C0sPYMGNuNEYx2RWkX-fTgRNv3Lqap65O-LKMpFXhMtcY9sAAINcEwN88iiK5OJL6p35Wrkw1J6dOQB9XON4x-HYUIK4kS6XXr8uY7a5WuuhhZTsL2BymuFPOOFJufawvw4OkBZzunYK5E1VSe3TfOCoJ7RjuiXK9di2ZpsFXI-vWKJX5-X07oyVLD3be2r3Swr3Q__",
+      "name_item": "Bình tưới CB2 SAIC",
+      "price": "90000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/8b3b/8e59/98995d529e75c643d53868f424fa78e3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Ga8tN06iRARQ~gpZXV7LZlMhHspbt2LZ6MlQVLvTtjeHIgIbsJAMBhoJJ9WzF6bRp~q-MvHCdTX4LjNVsw12ilf4z5Uk-pnCdh0Bl~VpvzLFckKSwIOPxqg8hWsFd7qRChRnwU-hBGHREb7Px234bWJm7gByIik2jo6Q-ANryFVmc4NSkOcti8WwWdChSjRocWPqc0yTrmeXgFVI~UOaJmZsYOCAkpI2-QWnlvkhTcl7eHEb3r1s5lYp-CNwJSKYin9XXGdx3cIF-AyVCIGVK-GIsDiBcQvktMY~e~w5WcGDSzCMaPvg5gyUzv867C25BArUIstTkRCNbapaQmRMXg__",
+      "name_item": "Bình xịt Xiaoda",
+      "price": "58000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/4f14/d646/b1d93b03d1f0d764d4dbd36776ce167e?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dUGaZPQXXumq6leZi3rGroR0WAwoF3CxCp0nVyxXkAyDAdUOSJfLgQuR5v3Y~9ZtFB76SrZh07LmQkli5K1yod1b2CGq~jjL12gt6yLkVleOnu7QL~HeupYQg2R9NtekJAyt0dH6jZtEs~QwAlTjqsDuPkmZlQw873p5vKeECiwNeBFNCEry-A2CSJmkZ0XEvaW4yxYj-~8tDNby5myk~vNUT70fzKVz46YAe-lU4qSKSJsad3LeupVfDjeHfi42ST-nPuX-~X4t4nbRX2mjQVYORDrLLXjALkbI-pDxosv0JhuMqDa4lIkr941sO2Yt2a1t~m1By95N6gGrJCWyEA__",
+      "name_item": "Bộ cuốc xẻng mini",
+      "price": "145000"
+    },
+    {
+      "avatar": "https://s3-alpha-sig.figma.com/img/ed35/2885/b62e1c2395ebc40524ae673f02e8972b?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LjLXo3teehtqX43yc74f7BcUSQNKFlDEVR4ZKMCquHPimTliBUTcU57nTX0Dr~cXulnSVl2gA0SJns8Xq0fJAVKAQFupZNkntEenWRwZsjifPtqrSFpbd975C2hmEsNumeWr~oF2lQWWHHEOG-N2H5~iPDaKmrzB75PSO934j9rtrtdo3kcQgIxaHKsQgng1wMUq1oJzWUe9ir8LPGTMUoQr~y00xNdEdHc1T5ap2xxvK5xQ0K4dawsk8QVdUp4FOT2CJuhZAMoR5SKm~mKn8Vasz9F8uoKnL4M7k39BbNPijjxzHosV4FWDNymKXsIl4HMnMNH5LEzdZyqwhVtSFQ__",
+      "name_item": "Giá đỡ Finn Terrazzo",
+      "price": "125000"
+    }
   ]
 }
